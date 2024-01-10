@@ -19,13 +19,21 @@
  </form> 
  </header>  
  <main>
- <h1>Stockholm</h1>
- <p> 
-    Sunday 13:40 mostly cloudy
+  <div class="weather-app-data">
+  <div>
+   <h1 class="weather-app-city">Stockholm</h1>
+   <p class="weather-app-details"> 
+    Sunday 13:40, mostly cloudy
     <br />
-    humidity: 85% wind: 1 km/h
-</p>
-🌥-14°C
+    Humidity: <span class="detail-units">85%</span> Wind: <span class="detail-units">1 km/h</span>
+   </p>
+  </div>
+  <div class="weather-app-temperature-container">
+<div class="weather-app-icon">🌥</div>
+<div class="weather-app-temperature">-14</div>
+<div class="weather-app-unit">°C</div>
+</div>
+</div>
  </main>
  <footer>Built by <a href="https://github.com/bygriph" target="_blank">Evelina Grip</a>
 is <a href="https://github.com/bygriph/vanilla-weather-search-homework" target="_blank">open-sourced on Github</a>
