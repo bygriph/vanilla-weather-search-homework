@@ -13,15 +13,15 @@
 <body>
 <div class="app-container">
  <header> 
- <form class="search-form">
-    <input type="search" placeholder="Enter a city..." required class="search-form-input"/>
+ <form class="search-form" id="search-form">
+    <input type="search" placeholder="Enter a city..." required class="search-form-input" id="search-form-input"/>
     <input type="submit" value="Search" class="search-form-button"/>
  </form> 
  </header>  
  <main>
   <div class="weather-app-data">
   <div>
-   <h1 class="weather-app-city">Stockholm</h1>
+   <h1 class="weather-app-city" id="city-input">Stockholm</h1>
    <p class="weather-app-details"> 
     Sunday 13:40, mostly cloudy
     <br />
@@ -40,5 +40,6 @@ is <a href="https://github.com/bygriph/vanilla-weather-search-homework" target="
 and <a href="https://illustrious-cendol-6b04d0.netlify.app/" target="_blank">hosted on Netlify</a>
 </footer>
 </div>
+<script src="src/app.js"></script>
 </body>
 </html>
