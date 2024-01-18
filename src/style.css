@@ -76,7 +76,7 @@ main{
     width: 100px;
     height: 100px;
     margin-right: 10px;
-    margin-top: -15px;
+    margin-top: -8px;
 }
 .weather-app-temperature{
     font-size: 58px;
@@ -90,6 +90,22 @@ main{
     margin-top: 10px;
     
 }
+.weather-app-forecast{
+    text-align: center;
+    margin-top: 12px;
+}
+.weather-forecast-day{
+    color:#8A95F4
+}
+.forecast-temperatures{
+  font-size: 13px; 
+  color:#FFC671
+}
+
+.forecast-temp-min{
+    opacity: 0.8;
+}
+
 footer{
     text-align: center;
     font-size: 14px;
