@@ -51,8 +51,34 @@ function displayCity(event) {
    
     searchCity(searchInput.value);
 }
+function displayForecast(){
+let days = ["Sun", "Mon", "Tue", "Wed", "Thu"];
+let forecastHtml = "";
+
+
+days.forEach(function(day) {
+forecastHtml =
+  forecastHtml +
+  `   
+      <div class="weather-forecast-day">
+      <div class="weather-forecast-date">${day}</div>
+       <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-day.png" class="forecast-icon" width="44">
+       <div class="forecast-temperatures">
+       <span class="forecast-temp-max"> 
+        -11°</span>
+       <span class="forecast-temp-min"> 
+        -20°</span>
+      </div>
+      </div>
+   `;
+});
+
+let forecastElement = document.querySelector("#forecast");
+forecastElement.innerHTML = forecastHtml;
+}
 
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", displayCity);
 
 searchCity("Oslo")
+displayForecast();
