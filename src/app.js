@@ -53,7 +53,7 @@ function displayCity(event) {
     searchCity(searchInput.value);
 }
 
-function formatDate(timestamp){
+function formatDay(timestamp){
   let date = new Date(timestamp * 1000);
   let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
@@ -78,12 +78,12 @@ forecastHtml =
   forecastHtml +
   `   
       <div class="weather-forecast-day">
-      <div class="weather-forecast-date">${formatDate(day.time)}</div>
+      <div class="weather-forecast-date">${formatDay(day.time)}</div>
        <img src="${day.condition.icon_url}" class="forecast-icon" width="44">
        <div class="forecast-temperatures">
-       <span class="forecast-temp-max"> 
-        ${Math.round(day.temperature.maximum)}°</span>
-       <span class="forecast-temp-min"> 
+       <span class="forecast-temperature">
+        <strong>${Math.round(day.temperature.maximum)}°</strong></span>
+       <span class="forecast-temperature"> 
         ${Math.round(day.temperature.minimum)}°</span>
       </div>
       </div>
@@ -99,4 +99,3 @@ let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", displayCity);
 
 searchCity("Oslo")
-displayForecast();
